@@ -1,0 +1,122 @@
+@import url('../globais.css');
+header {
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+header > nav{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+header > nav ul{
+    width: fit-content;
+    display: flex;
+    list-style: none;
+    padding: 0%;
+}
+header > nav > div#menuNav > ul{
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+header > nav > div#menuNav > ul > li{
+    width: 25px;
+    height: 4px;
+    transition-duration: .3s;
+}
+header#blackHeader > nav > div#menuNav > ul > li{
+    background-color: var(--color2);
+}
+header#whiteHeader > nav > div#menuNav > ul > li{
+    background-color: var(--color4);
+}
+
+header > nav > div#menuNav > ul.menuFocus > li:nth-child(1){
+    transform: translate(7px, 7px);
+    rotate: 45deg;
+}
+header > nav > div#menuNav > ul.menuFocus > li:nth-child(2){
+    margin-left: 100px;
+    height: 0px;
+}
+header > nav > div#menuNav > ul.menuFocus > li:nth-child(3){
+    transform: translate(2px, -1.5px);
+    rotate:-45deg;
+}
+header > nav > div#redesNav > ul{
+    gap: 15px;
+}
+
+header#blackHeader > nav > div#redesNav > ul > li > a{
+    color: var(--color2);
+}
+header#whiteHeader > nav > div#redesNav > ul > li > a{
+    color: var(--color4);
+}
+
+header > nav > div#menuNav a{
+    text-decoration: none;
+}
+header#blackHeader > nav > div#menuNav a{
+    color: var(--color2);
+}
+header#whiteHeader > nav > div#menuNav a{
+    color: var(--color4);
+}
+header div#menuOpened, header div#menuClose{
+    position: absolute;
+    top: 64px;
+    left: 0px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: calc(80vh);  
+    width: 100vw;  
+    transition-duration: 0.3s;
+}
+header div#menuClose{
+    top: -1000px;
+}
+header div#menuClose ul{
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+header div#menuOpened ul{
+    width: 200px;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+header div#menuOpened ul li{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+}
+header div#menuOpened ul a{
+    transition-duration: 0.3s;
+}
+header div#menuOpened ul a:hover{
+    padding: 0px 20px;
+    position: absolute;
+    font-size: 24px;
+}
+header#blackHeader div#menuOpened ul a:hover{
+    border-bottom: 3px solid var(--color2);
+}
+header#whiteHeader div#menuOpened ul a:hover{
+    border-bottom: 3px solid var(--color4);
+}

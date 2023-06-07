@@ -1,0 +1,153 @@
+@import url('../globais.css');
+div#Projetos{
+    width: var(--wDiv);
+    min-height: var(--hDiv);
+    padding: var(--pDiv);
+    background-color: var(--color1);
+}
+div#Projetos h1{
+    color: var(--color4);
+}
+div#Projetos div#tituloProjetos{
+    width: fit-content;
+    margin-left: auto;    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: end;
+    padding: 50px 100px 20px 100px;
+}
+div#Projetos div#tituloProjetos div#line{
+    background-color: #563D7C;
+    width: 400px;
+    height: 5px;
+    margin-top: 10px;
+}
+
+
+div#Projetos div#allProjetos{
+    display: flex;
+    flex-direction: column;
+}
+div#Projetos div.conteinerProjetos{
+    width: 100%;
+    max-width: 1900px;
+    margin: auto;
+    height: calc((100vh - 64px - 125px) / 2);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div#Projetos div.conteinerProjetos div.projetos{
+    background-color: var(--color2);
+    min-width: 208px;
+    width: 20%;
+    max-width: 350px;
+    height: 75%;
+    max-height: 350px;
+    
+    position: relative;
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000009c;
+
+    overflow: hidden;
+}
+div#Projetos div.conteinerProjetos div.projetos div.ferramentas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0303037e;
+    transition-duration: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+div#Projetos div.conteinerProjetos div.projetos:hover div.ferramentas{
+    background-color: transparent;
+}
+div#Projetos div.conteinerProjetos div.projetos div.ferramentas div{
+    transition-duration: 0.4s;
+    z-index: 1;
+}
+div#Projetos div.conteinerProjetos div.projetos:hover div.ferramentas div{
+    z-index: 0;
+}
+div#Projetos div.conteinerProjetos div.projetos div.ferramentas span{
+    color: var(--color4);
+    transition-duration: 0.2s;
+}
+
+
+div#Projetos div.conteinerProjetos:nth-child(1) div.projetos:nth-child(2) div.ferramentas span{
+    color: var(--color2);
+}
+div#Projetos div.conteinerProjetos:nth-child(2) div.projetos:nth-child(1) div.ferramentas span{
+    color: var(--color2);
+}
+
+
+div#Projetos div.conteinerProjetos div.projetos:hover div.ferramentas span{
+    font-size: 0px;
+    color: transparent;
+    transition-duration: 0.5s;
+}
+div#Projetos div.conteinerProjetos div.projetos div.ferramentas img{
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+div#Projetos div.conteinerProjetos div.projetos:hover div.ferramentas img{
+    width: 30px;
+    height: 30px;
+    z-index: 0;
+}
+div#Projetos div.conteinerProjetos div.projetos div.projetoImage{
+    filter: blur(2px);
+    transition-duration: 0.3s;
+    width: 100%;
+    height: 100%;
+}
+div#Projetos div.conteinerProjetos div.projetos:hover div.projetoImage{
+    filter: blur(0px);
+}
+div#Projetos div.conteinerProjetos div.projetos div.projetoImage img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1600px) {
+    div#Projetos div.conteinerProjetos{
+        gap: 50px;
+        box-sizing: border-box;
+        height: auto;
+        min-height: 300px;
+        padding: 20px 50px;
+    }
+    div#Projetos div.conteinerProjetos div.projetos{
+        width: 300px;
+        height: 270px;
+    }
+}
+@media (max-width: 750px) {
+    div#Projetos div#tituloProjetos{
+        width: 100vw;
+        padding: 0%;
+        margin: 0px;
+    }
+}
+@media (max-width: 559px) {
+    div#Projetos div#tituloProjetos div#line{
+        width: 90vw;
+        margin-bottom: 30px;
+    }
+}

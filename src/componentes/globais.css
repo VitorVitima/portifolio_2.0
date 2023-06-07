@@ -1,0 +1,10 @@
+:root{
+    --color1: #6D0FF2;
+    --color2: #030027;
+    --color3: #FF6978;
+    --color4: #FFFFFF;
+    
+    --wDiv: 100vw;
+    --hDiv: calc(100vh);
+    --pDiv: 64px 0px 0px 0px;
+}
