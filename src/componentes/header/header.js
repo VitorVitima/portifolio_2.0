@@ -5,10 +5,16 @@ function Header() {
   const [colorHeader, setColorHeader] = useState('blackHeader') 
   const doc = document.documentElement
   const percentageOfScrollY = () => Math.floor(100 * doc.scrollTop / (doc.scrollHeight - doc.clientHeight))
+  function minSwitchColorHeader(){
+    if(window.innerWidth < 750){
+      return 26
+    }
+    return 33
+  }
   function toScroll(){
-    if(percentageOfScrollY() >= 33 && colorHeader != 'whiteHeader'){
+    if(percentageOfScrollY() >= minSwitchColorHeader() && colorHeader != 'whiteHeader'){
       setColorHeader('whiteHeader')
-    } else if(percentageOfScrollY() < 33 && colorHeader != 'blackHeader'){
+    } else if(percentageOfScrollY() < minSwitchColorHeader() && colorHeader != 'blackHeader'){
       setColorHeader('blackHeader')
     }
   }

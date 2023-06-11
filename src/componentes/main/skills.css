@@ -111,7 +111,7 @@ div#dadosSkills div.conteinerGrafico:nth-child(3) > div > div{
         align-items: center;
     }
 }
-@media (max-width: 559px) {
+@media (max-width: 1025px) {
     div#Skills{
         box-sizing: content-box;
         min-height: var(--hDiv);
@@ -131,6 +131,7 @@ div#dadosSkills div.conteinerGrafico:nth-child(3) > div > div{
     }
     div#dadosSkills div#dados p{
         text-align: center;
+        max-width: 500px;
         width: 70vw;
     }
 }
